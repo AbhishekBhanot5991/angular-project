@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+/* html, body { height: 100% !important } */
+body{
+    /* height: 100vh;   */
+    /* width:100%; */
+    background-image: linear-gradient(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.p-datatable .p-datatable-tbody > tr{
+    background-color: transparent !important;
+    color:#fff !important;
+}
+div[ng-view]{
+    height: 100%;
+}

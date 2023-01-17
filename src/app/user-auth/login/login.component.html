@@ -1,0 +1,48 @@
+<section class="main-div">
+
+    <div class="container p-2 p-md-3 p-lg-5 text-center ">
+        <div class="row m-2 m-md-3 m-lg-5">
+           
+            <div class="col-md-4 login-background p-2 p-md-3 p-lg-5 shadow m-auto">
+                <form (ngSubmit)="onSubmit()" #f="ngForm">
+                    <h2 class="text-white mb-2 mb-md-3 mb-lg-5">Login</h2>
+                    <input 
+                    type="text"  
+                    class="form-control text-center text-white mb-2 p-2" 
+                    ngModel
+                    name="username" 
+                    id="" 
+                    required
+                    placeholder="Username"
+                    #username="ngModel">
+                    <span class="help-block" *ngIf="!username.valid && username.touched">Please enter valid Username</span>
+                    <input type="email"  
+                    class="form-control text-center text-white mb-2 p-2" 
+                    name="email" 
+                    id="" 
+                    ngModel
+                    placeholder="Email"
+                    required
+                    email
+                    #email="ngModel">
+                    <span class="help-block" *ngIf="!email.valid && email.touched">Please enter valid email</span>
+                    <input type="password"  
+                    class="form-control text-center text-white mb-2 p-2" 
+                    name="pwd" 
+                    id="" 
+                    placeholder="Password">
+                    
+                    <!-- <input type="submit" (click)="goToRegister()"   value="Submit"> -->
+                    
+                    <button  
+                    class="form-control bg-dark text-white submit p-2 mb-2 mb-md-3 mb-lg-5"  
+                    type="submit"
+                    [disabled]="!f.valid" >Submit</button>
+                    <!-- <button  class="form-control bg-dark text-white submit p-2 mb-2 mb-md-3 mb-lg-5"  (click)="goToDashboard()" >Submit</button> -->
+                    
+                    <small class="">Don't have an Account? <a class="link" (click)="goToRegister()">Register Here</a></small>
+                </form>    
+            </div>
+        </div>
+    </div>
+</section>

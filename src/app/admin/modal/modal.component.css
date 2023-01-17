@@ -1,0 +1,8 @@
+/* #float-input{
+    padding: .5rem;
+
+} */
+.custm-form-class{
+    display: flex;
+    flex-direction: column;
+}
